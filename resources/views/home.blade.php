@@ -12,7 +12,7 @@
                     <form method="GET">
                       <div class="form-group">
                         <label for="exampleInputEmail1">City Origin</label>
-                        <select class="form-control" name="origin">
+                        <select class="form-control" name="origin" required>
                             @foreach($kota as $k)
                                 <option value="{{ $k->city_id }}">{{ $k->city_name }}</option>
                             @endforeach
@@ -20,7 +20,7 @@
                       </div>
                       <div class="form-group">
                         <label for="exampleInputPassword1">City Destination</label>
-                        <select class="form-control" name="destination">
+                        <select class="form-control" name="destination" required>
                             @foreach($kota as $k)
                                 <option value="{{ $k->city_id }}">{{ $k->city_name }}</option>
                             @endforeach
@@ -28,7 +28,7 @@
                       </div>
                       <div class="form-group">
                         <label for="exampleInputPassword1">Berat(Gram)</label>
-                        <input type="number" name="weight" class="form-control" id="exampleInputPassword1" placeholder="Berat">
+                        <input type="number" name="weight" class="form-control" id="exampleInputPassword1" placeholder="Berat" required>
                       </div>
                       <button type="submit" class="btn btn-default">Check Ongkir</button>
                     </form>
